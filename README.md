@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+After you clone the repo, just type `yarn` in the root folder as well as the backend folder to install all the dependencies.\
+In the terminal, cd into backend folder and run `nodemon server.js` to set up the backend server.\
+Go back to the root folder and run `yarn start` and you shoud be able to explore the demo.
+
 
 ## Available Scripts
 
