@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
+import { Switch, Route, Redirect } from "react-router-dom";
+import ViewOrders from "../src/pages/ViewOrders"
+import AddNewOrder from "./pages/AddNewOrder"
+import OrderDetails from "./pages/OrderDetails"
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <>
+        <Switch>
+          <Route path={"/viewOrders"} exact component={ViewOrders} />
+          <Route path={"/addNewOrder"} exact component={AddNewOrder} />
+          <Route
+            path={"/orderDetails/:orderDetails"}
+            exact
+            component={OrderDetails}
+          />
+          <Route path={"*"} exact component={ViewOrders} />
+          <Redirect path={"/"} />
+        </Switch>
+      </>
     </div>
   );
 }
